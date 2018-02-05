@@ -22,24 +22,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        btnAdd = (Button) findViewById(R.id.buttonAdd);
+        btnAdd =  findViewById(R.id.buttonAdd);
         btnAdd.setOnClickListener(this);
 
-        btnRead = (Button) findViewById(R.id.buttonRead);
+        btnRead =  findViewById(R.id.buttonRead);
         btnRead.setOnClickListener(this);
 
-        btnClear = (Button) findViewById(R.id.buttonClear);
+        btnClear =  findViewById(R.id.buttonClear);
         btnClear.setOnClickListener(this);
 
-        btnUpd = (Button) findViewById(R.id.buttonUpd);
+        btnUpd = findViewById(R.id.buttonUpd);
         btnUpd.setOnClickListener(this);
 
-        btnDel = (Button) findViewById(R.id.buttonDel);
+        btnDel = findViewById(R.id.buttonDel);
         btnDel.setOnClickListener(this);
 
-        etId =  (EditText) findViewById(R.id.editTextId);
-        etName = (EditText) findViewById(R.id.editTextName);
-        etEmail = (EditText) findViewById(R.id.editTextEmail);
+        etId =   findViewById(R.id.editTextId);
+        etName = findViewById(R.id.editTextName);
+        etEmail =  findViewById(R.id.editTextEmail);
 
         dbHelper = new DBHelper(this);
     }
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("mLog", "udpate: "+countUpd+" rows");
                 break;
             case R.id.buttonDel:
-                if (id.equalsIgnoreCase("")){
+                if (name.equalsIgnoreCase("")){
                     break;
                 }
 
